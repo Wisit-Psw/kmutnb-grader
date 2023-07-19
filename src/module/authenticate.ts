@@ -14,9 +14,11 @@ export const authenticate = async () : Promise<boolean> => {
             }
         });
         const json = await response.json();
-        if(json.status === "success" && json.response)
+        if(json.status === "success" && json.response){
             userstore.setInfo(json.response);
-        return true;
+            return true;
+        }
+        return false;
     }catch{
         userstore.setInfo(null);
         return false;
