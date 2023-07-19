@@ -17,7 +17,7 @@ const route = useRouter();
 const onSubmit = async (e: Event) => {
     e.preventDefault();
     try{
-        const response = await fetch("http://localhost:3000/api/authenticate", {
+        const response = await fetch(import.meta.env.VITE_api+"/api/authenticate", {
             method: "POST",
             body: JSON.stringify({
                 username : data.username,
