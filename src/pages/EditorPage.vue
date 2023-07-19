@@ -2,7 +2,7 @@
 import LoadingIcon from "../components/LoadingIcon.vue"
 import FooterBar from "../components/FooterBar.vue"
 import NavigationBar from '../components/NavigationBar.vue'
-import ComplieRequest from "../module/requestcomplie"
+import ComplieRequest from "../module/requestcompile"
 import { Codemirror } from 'vue-codemirror'
 import { cpp } from '@codemirror/lang-cpp'
 import { oneDark } from '@codemirror/theme-one-dark'
