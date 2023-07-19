@@ -7,7 +7,7 @@ export const CompileRequest = async (code: string, stdin: string, ctype: string)
     try{
         const Id = Math.floor(Math.random() * Math.floor(Math.random() * Date.now())).toString();
 
-        const response = await fetch("http://localhost:3000/api/compile", {
+        const response = await fetch(import.meta.env.VITE_api+"/api/compile", {
             method: "POST",
             body: JSON.stringify({
                 code,

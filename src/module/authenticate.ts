@@ -6,7 +6,7 @@ export const authenticate = async () : Promise<boolean> => {
         const token = localStorage.getItem('token')
         if(!token?.length) throw new Error('Token empty or undefined');
 
-        const response = await fetch("http://localhost:3000/api/accessgate", {
+        const response = await fetch(import.meta.env.VITE_api+"/api/accessgate", {
             method: "GET",
             headers:{
                 "Content-Type": "application/json",
