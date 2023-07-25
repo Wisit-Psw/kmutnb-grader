@@ -1,17 +1,17 @@
 <script setup lang="ts">
 // import LoadingIcon from "../components/LoadingIcon.vue"
 // import FooterBar from "../components/FooterBar.vue"
-import { useUserStore } from "../module/userstore"
+// import { useUserStore } from "../module/userstore"
 import NavigationBar from '../components/NavigationBar.vue'
 import TableComponent from '../components/TableComponent.vue'
 import { reactive, onMounted } from 'vue';
-import { useRouter } from 'vue-router'
+// import { useRouter } from 'vue-router'
 
-const userdata = useUserStore();
-const router = useRouter();
+// const userdata = useUserStore();
+// const router = useRouter();
 
 type status = "success" | "error" | string
-type Page = { 
+type Page = {
     selected: boolean
 }
 type TableHeader = {
@@ -21,15 +21,17 @@ type TableHeader = {
 }
 type TableCell = {
     Username: string,
-    Data: {[key:string]:{
-        id: string,
-        pass: boolean
-    }}
+    Data: {
+        [key: string]: {
+            id: string,
+            pass: boolean
+        }
+    }
 }
 type TableData = {
     response: {
-        Structure:Array<TableHeader>
-        Assigned:Array<TableCell>
+        Structure: Array<TableHeader>
+        Assigned: Array<TableCell>
     }
     status: status,
 }
@@ -38,10 +40,831 @@ const Page = reactive<Page>({
 })
 const data = reactive<TableData>({
     response: {
-        Structure: [],
-        Assigned: []
+        Structure: [
+            {
+                "Id": "prob1",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob2",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob3",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob4",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob5",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob6",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob7",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob8",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob9",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob10",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob11",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob12",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob13",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob14",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob15",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob16",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob17",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob18",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob19",
+                "Name": "Array2",
+                "Info": ""
+            }, {
+                "Id": "prob20",
+                "Name": "Array2",
+                "Info": ""
+            }
+        ],
+        Assigned: [
+            {
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": true
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": true
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": true
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": true
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": true
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": true
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": true
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": true
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": true
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": true
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": true
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": true
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": true
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": true
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": true
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": true
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": true
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": true
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": true
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": true
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User1",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },{
+                Username: "User99",
+                Data:{
+                    "prob1": {
+                            "id": "prob1",
+                            "pass": false
+                            } , 
+                    "prob2": {
+                            "id": "prob2",
+                            "pass": false
+                            } ,
+                    "prob3": {
+                            "id": "prob3",
+                            "pass": false
+                            } ,
+                    "prob6": {
+                            "id": "prob6",
+                            "pass": false
+                            } ,
+                    "prob10": {
+                            "id": "prob10",
+                            "pass": false
+                            } ,
+                    "prob11": {
+                            "id": "prob11",
+                            "pass": false
+                            } ,
+                    "prob12": {
+                            "id": "prob12",
+                            "pass": false
+                            } ,
+                }
+            },
+        ]
+        
     },
-    status: ""
+status: "success",
 })
 const GetUsertable = async () => {
     try {
@@ -60,7 +883,7 @@ const GetUsertable = async () => {
             data.response = json.response;
             data.status = json.status;
             return
-        }else{
+        } else {
             data.status = json.status;
         }
     } catch (error) {
@@ -72,20 +895,20 @@ const onMenuButtonClick = (bool: boolean) => {
     Page.selected = bool;
 }
 
-const UserMapping = (UserData: any) : string => {
-    if(!UserData) return "unknown";
+const UserMapping = (UserData: any): string => {
+    if (!UserData) return "unknown";
 
 
     return UserData.pass ? 'checked' : 'cross';
 }
 
-onMounted(() => {
-    if(userdata.info?.isadmin){
-        GetUsertable()
-    }else{
-        router.push("/editor");
-    }
-})
+// onMounted(() => {
+//     if(userdata.info?.isadmin){
+//         GetUsertable()
+//     }else{
+//         router.push("/editor");
+//     }
+// })
 
 </script>
 
@@ -104,23 +927,24 @@ onMounted(() => {
                 <table class="Table" v-if="data.status === 'success'">
                     <thead>
                         <tr>
-                            <th style="width:20vw;z-index:10" class="UserHeader">นักเรียน</th>
-                            <th class="TableHeader" v-for="(Propo,_index) in data.response.Structure" :key="Propo.Id">
+                            <th style="z-index:10" class="UserHeader">นักเรียน</th>
+                            <th class="TableHeader" v-for="(Propo, _index) in data.response.Structure" :key="Propo.Id">
                                 <span>{{ Propo.Name }}</span>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(UserData,index) in data?.response?.Assigned" :key="index">
+                        <tr v-for="(UserData, index) in data?.response?.Assigned" :key="index">
                             <td class="UserHeader">{{ UserData.Username }}</td>
-                            <td v-for="(assignment, _index2) in data?.response?.Structure" :key="assignment.Id+UserData.Username">
+                            <!-- แก้เป็น ชื้อ-นามสกุล -->
+                            <td v-for="(assignment, _index2) in data?.response?.Structure"
+                                :key="assignment.Id + UserData.Username">
                                 <TableComponent :type="UserMapping(UserData.Data[assignment.Id])">ยังไม่ส่ง</TableComponent>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
         <div class="container2">
             <div class="TableContainer">
@@ -150,9 +974,11 @@ onMounted(() => {
     margin-top: 3rem;
 
 }
-.Icon-wrap{
+
+.Icon-wrap {
     max-height: 2rem;
 }
+
 .MenuButton {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -183,18 +1009,18 @@ onMounted(() => {
 
 .TableContainer {
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     overflow: scroll;
     margin: 0 auto;
 }
 
 table {
     border-collapse: collapse;
-    border: 2px solid #ddd;
+    /*border: 2px solid #ddd;*/
     font-size: 1.2rem;
     table-layout: auto;
     /* ตั้งค่าให้ตารางมีขนาดคงที่ */
-    width: 90vw;
+    width: 100vw;
     overflow-y: scroll;
     overflow-x: scroll;
     text-align: center;
@@ -202,35 +1028,36 @@ table {
 
 th,
 td {
-    border: 2px solid #ddd;
-    padding: 12px;
+    /*border: 2px solid #ddd;*/
+    padding: 0.2rem  1rem;
     min-width: fit-content;
     white-space: nowrap;
+    color: white;
     /* ไม่ตัดข้อความในเซลล์ */
     word-wrap: break-word;
     z-index: 0;
-    background-color: #fff;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: none;
     position: sticky;
     /* ตั้งค่าให้ส่วนหัวตารางติดอยู่ด้านบนของตาราง */
     top: 0;
     /* ตั้งค่าให้ส่วนหัวตารางติดอยู่ที่ด้านบนของหน้าจอ */
     z-index: 5;
+    background-color: #18191e;
 }
 
-tr:nth-child(even) {
+/*tr:nth-child(even) {
     background-color: #f2f2f2;
-}
+}*/
 
 tr:nth-child(odd) {
-    background-color: #fff;
+    background-color: #222227;
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #18191e;
 }
 
 .ContentContainer {
@@ -244,6 +1071,7 @@ tr:hover {
     padding-left: 1.5rem;
     left: 0;
     z-index: 4;
-    background-color: white;
+    background-color: #18191e;
+    width: 90vw;
 }
 </style>

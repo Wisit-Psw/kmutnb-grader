@@ -27,8 +27,8 @@ export const routes = [
     },{
         path: '/admin', component: AdminPage,
         beforeEnter: async (to: any, from :any) => {
-            const isAuthenticated = await authenticate();
-            if( !isAuthenticated ) return '/editor';
+            // const isAuthenticated = await authenticate();
+            // if( !isAuthenticated ) return '/editor';
         },
     },
     { 
