@@ -3,6 +3,8 @@ import { defineStore } from "pinia"
 type info = {
     exp: number
     username: string
+    firstname:string,
+    lastname:string,
     isadmin: boolean
 }
 

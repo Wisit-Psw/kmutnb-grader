@@ -3,7 +3,7 @@ import { useUserStore } from "./userstore"
 export const authenticate = async () : Promise<boolean> => {
     const userstore = useUserStore()
     try{
-        const token = localStorage.getItem('token')
+        const token = localStorage.getItem('token');
         if(!token?.length) throw new Error('Token empty or undefined');
 
         const response = await fetch(import.meta.env.VITE_api+"/api/accessgate", {

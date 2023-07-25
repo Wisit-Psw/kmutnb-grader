@@ -10,7 +10,7 @@
 <style scoped>
 .footer{
   width: 100%;
-  padding: 2rem 1rem;
-  background: #18191e;
+  padding: 0.5rem 1rem;
+  background: #1d2125;
 }
 </style>

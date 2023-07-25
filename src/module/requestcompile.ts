@@ -1,9 +1,11 @@
 type Output = {
     output: string;
     status: string;
+    result?: string;
+    expected?: string;
 }
 
-export const CompileRequest = async (code: string, stdin: string, ctype: string):Promise<Output | null> => {
+export const CompileRequest = async (code: string, stdin: string, ctype: string, grader:boolean, solution?:string):Promise<Output | null> => {
     try{
         const Id = Math.floor(Math.random() * Math.floor(Math.random() * Date.now())).toString();
 
@@ -13,7 +15,9 @@ export const CompileRequest = async (code: string, stdin: string, ctype: string)
                 code,
                 ctype,
                 input: stdin,
-                id: Id
+                id: Id,
+                grade: grader || false,
+                sol:solution
             }),
             headers:{
                 "Content-Type": "application/json",

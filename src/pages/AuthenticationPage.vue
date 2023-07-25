@@ -119,7 +119,7 @@ const onSubmit = async (e: Event) => {
     border-radius: inherit;
 }
 
-.formWrap {}
+/*.formWrap {}*/
 
 .inputWrapper {
     position: relative;
@@ -182,7 +182,7 @@ const onSubmit = async (e: Event) => {
     background: rgb(157, 104, 58);
 }
 
-.loginwrap {}
+/*.loginwrap {}*/
 
 .signupwrap {
     margin-top: 1rem;

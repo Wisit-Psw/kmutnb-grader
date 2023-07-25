@@ -1,3 +1,33 @@
+<script setup lang="ts">
+import { reactive, onUnmounted, onMounted } from 'vue';
+
+const Text = reactive<{ Loading: String, Timeout: number }>({
+  Loading: "Compiling",
+  Timeout: 0,
+})
+
+const LoadingText =  ()=> {
+    let c = 0;
+    return () => {
+        if(c<3){
+            Text.Loading = Text.Loading+".";
+        }else{
+            c=0;
+            Text.Loading = "Compiling";
+        };
+        console.log(c);
+        c++;
+    }
+}
+
+onMounted(() => {
+    Text.Timeout = setInterval(LoadingText(), 500);
+}),
+
+onUnmounted(() => {
+    clearInterval(Text.Timeout);
+})
+</script>
 <template>
     <div class="loading-ring">
         <div></div>
@@ -5,6 +35,7 @@
         <div></div>
         <div></div>
     </div>
+    <div>{{Text.Loading }}</div>
 </template>
 
 <style scoped>
