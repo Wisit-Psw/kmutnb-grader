@@ -107,6 +107,7 @@ const outSideDetected = (e:Event) => {
   top:5rem;
   right:0;
   list-style: none;
+  z-index: 10;
 }
 .DropdownMenu{
   padding:1rem;

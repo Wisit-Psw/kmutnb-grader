@@ -1,7 +1,7 @@
 <script setup lang="ts" >
 
 defineEmits(["onAddGroupBtnClick"])
-
+defineProps(["Page"])
 
 </script>
 

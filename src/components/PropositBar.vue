@@ -37,7 +37,6 @@ const GetAssigned = async () => {
         const json = await response.json();
         if (json.status === "success" && json.response) {
             data.response = json.response;
-            console.log(data.response)
             data.status = json.status;
             return
         } else {

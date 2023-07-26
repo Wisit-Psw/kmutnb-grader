@@ -15,7 +15,6 @@ const LoadingText =  ()=> {
             c=0;
             Text.Loading = "Compiling";
         };
-        console.log(c);
         c++;
     }
 }

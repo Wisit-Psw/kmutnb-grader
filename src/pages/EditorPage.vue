@@ -49,7 +49,6 @@ const lines = computed(() => data.output.split(/\r?\n/));
 const onSelectedChange = (Name: string, Id: string) => {
   ProbSelected.Name = Name;
   ProbSelected.Id = Id;
-  console.log(ProbSelected.Id, ProbSelected.Name)
 }
 
 const handleReady = (payload: {
@@ -76,12 +75,10 @@ const onRunClick = async () => {
 const onGraderSubmit = async () => {
   if (state.awaitsubmit) return;
   data.output = "";
-
   state.awaitsubmit = true;
   const response = await ComplieRequest(data.code, data.input, "c++", true, ProbSelected.Id);
   state.awaitsubmit = false;
   if (response?.status && response?.output) {
-    console.log(response)
     data.output = response.output;
     data.status = response.status;
   }
@@ -102,7 +99,6 @@ const onGraderSubmit = async () => {
 
 const CloseClick=()=>{
   NonepasspopupState.IsShow = false;
-  console.log(NonepasspopupState.IsShow);
 }
 
 const onFileChange = (event: any) => {
@@ -170,11 +166,6 @@ const onSubmitClick = () => {
       :style="{ height: '80vh', width: '100%' }" :autofocus="true" :indent-with-tab="true" :tab-size="2"
       :extensions="extensions" @ready="handleReady" @focus="console.log('focus', $event)"
       @blur="console.log('blur', $event)" />
-    <!-- <div class="controller-container">
-      <div class="controller-buttonwrapper">
-        <button @click="onRunClick" :class="`controller-button ${state.awaitsubmit ? 'submiting' : ''}`" >Run</button>
-      </div>
-    </div> -->
     <div class="MiddleBar"></div>
     <div class="result-container">
       <div class="stdin-inputwrap">
